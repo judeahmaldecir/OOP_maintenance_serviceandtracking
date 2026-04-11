@@ -15,7 +15,7 @@ public class carMenu extends JFrame implements ActionListener{
         setSize(1000,600);
         setLayout(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Car Menu");
+        setTitle("Car Selection");
         
         lblTitle = new JLabel(">> Select A Car <<");
         lblTitle.setBounds(430,20,200,50);
@@ -44,11 +44,39 @@ public class carMenu extends JFrame implements ActionListener{
         enterbtn = new JButton("Enter");
         enterbtn.setBounds(390,400,200,40);
         add(enterbtn);
+        
+        enterbtn.addActionListener(this);
     }
 
     @Override
-    public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void actionPerformed(ActionEvent j) {
+       if (j.getSource() == enterbtn)
+        {
+           String selectedCar = (String) dbtncarModel.getSelectedItem();
+           String selectedPlate = (String) dbtnplateNumber.getSelectedItem();
+          
+           if (selectedCar.equals("Toyota Vios")&& selectedPlate.equals("NCT 1270"))
+           {
+               dispose();
+               carStatusToyotaVios1270 csToyota1270 = new carStatusToyotaVios1270();
+               csToyota1270.setVisible(true);
+           }
+           
+           else if (selectedCar.equals("Nissan GT-R")&& selectedPlate.equals("TRP 4567"))
+           {
+               // classssss
+           }
+           
+           else 
+           {
+              JOptionPane.showMessageDialog(this, "No car on the list"); 
+           }
+              
+       }
+       
+       else {
+           System.out.println("sfdfsdfs");
+       }
     }
     
 }
