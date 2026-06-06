@@ -5,6 +5,7 @@ import javax.swing.*;
 // per car model + plate number mey class, and current status like diss. 
 // ung na save na satus is dito magpapakita sa class na itu
 // oki lang ba na ganun? or mashadong matrabaho? let me know po sa opinon niyo hehe.
+//AAAAA TRY TRY TRY
 
 public class carStatusToyotaVios1270 extends JFrame implements ActionListener{
     JLabel lblcarModelPlatenum, lbl2ndHeadStatus, lblReports;
